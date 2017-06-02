@@ -5,6 +5,7 @@ import com.itra.models.User;
 import org.springframework.data.repository.CrudRepository;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 
 @Transactional
 public interface UserDao extends CrudRepository<User, Long> {
@@ -15,5 +16,7 @@ public interface UserDao extends CrudRepository<User, Long> {
      * @param email the user email.
      */
     public User findByEmail(String email);
+    //@Override
+    public ArrayList<User> findAll();
 
 }
